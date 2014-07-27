@@ -1,5 +1,5 @@
 {% set java = pillar.get('java', {}) -%}
-{% set jre = java.get('jre') -%}
+{% set jre = java.get('jre', {}) -%}
 {% set home = jre.get('home', '/opt') -%}
 
 server_jre_tar:
