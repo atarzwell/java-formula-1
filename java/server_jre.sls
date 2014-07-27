@@ -4,6 +4,7 @@
 
 server_jre_tar:
   file.managed:
+
 {%- if not jre.get('source', None) == None %}
     - name: {{ home }}/server_jre.tgz
     - source: {{ jre['source'] }}
