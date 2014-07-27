@@ -4,15 +4,14 @@
 
 server_jre_tar:
   file.managed:
-
-{%- if not jre.get('source', None) == None %}
+{% if not jre.get('source', None) == None %}
     - name: {{ home }}/server_jre.tgz
     - source: {{ jre['source'] }}
     - source_hash: {{ jre['source_hash'] }}
-{% else -%}
+{% else %}
     - name: {{ home }}/server_jre.tgz
     - source: salt://java/files/server_jre.tgz
-{% endif -%}
+{% endif %}
   cmd.run:
     - name: tar xvf {{ home }}/server_jre.tgz -C {{ home }}
     - require:
