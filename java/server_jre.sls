@@ -21,7 +21,7 @@ java_alternatives:
   alternatives.install:
     - name: java
     - link: /usr/bin/java
-    - path: {{ home }}/jdk1.8.0_11/bin/java
+    - path: {{ home }}/jdk1.8.0_74/bin/java
     - priority: 101
     - require: 
       - file: server_jre_tar  
