@@ -22,6 +22,6 @@ java_alternatives:
     - name: java
     - link: /usr/bin/java
     - path: {{ home }}/jdk1.8.0_74/bin/java
-    - priority: 101
+    - priority: 2000
     - require: 
       - file: server_jre_tar  
